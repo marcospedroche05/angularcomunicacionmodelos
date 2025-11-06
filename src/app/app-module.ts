@@ -9,6 +9,9 @@ import { PadrecochesComponent } from './components/padrecoches.component/padreco
 import { HijococheComponent } from './components/hijocoche.component/hijocoche.component';
 import { PadredeporteComponent } from './components/padredeporte.component/padredeporte.component';
 import { HijodeporteComponent } from './components/hijodeporte.component/hijodeporte.component';
+import { ComicComponent } from './components/comic.component/comic.component';
+import { LibreriaComponent } from './components/libreria.component/libreria.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,11 +21,14 @@ import { HijodeporteComponent } from './components/hijodeporte.component/hijodep
     PadrecochesComponent,
     HijococheComponent,
     PadredeporteComponent,
-    HijodeporteComponent
+    HijodeporteComponent,
+    ComicComponent,
+    LibreriaComponent,
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

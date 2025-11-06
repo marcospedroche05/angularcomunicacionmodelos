@@ -4,11 +4,13 @@ import { ListaproductosComponent } from "./components/listaproductos.component/l
 import { HijococheComponent } from "./components/hijocoche.component/hijocoche.component";
 import { PadrecochesComponent } from "./components/padrecoches.component/padrecoches.component";
 import { PadredeporteComponent } from "./components/padredeporte.component/padredeporte.component";
+import { LibreriaComponent } from "./components/libreria.component/libreria.component";
 
 const appRoutes: Routes = [
     {path: "listaproductos", component: ListaproductosComponent},
     {path: "coches", component: PadrecochesComponent},
-    {path: "padredeportes", component: PadredeporteComponent}
+    {path: "padredeportes", component: PadredeporteComponent},
+    {path: "libreria", component: LibreriaComponent}
 ]
 
 export const appRoutingProvider: any[] = [];

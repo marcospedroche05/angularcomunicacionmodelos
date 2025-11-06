@@ -1,0 +1,7 @@
+<div>
+    <h1>Libreria</h1>
+    <hr>
+    @for(elemento of comics; track elemento){
+        <app-comic [comic]="elemento"></app-comic>
+    }
+</div>
