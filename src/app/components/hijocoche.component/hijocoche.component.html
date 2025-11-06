@@ -1,0 +1,14 @@
+<div>
+    <h1 style="color: blue;">
+        {{car.marca}} {{car.modelo}}
+    </h1>
+    <h2 *ngIf="mensaje" [ngClass]="{
+        encendido: car.estado == true,
+        apagado: car.estado == false
+    }">
+        {{mensaje}}
+    </h2>
+    <h2>Velocidad actual {{car.velocidad}}</h2>
+    <button (click)="encenderCoche()">Interruptor</button>
+    <button (click)="acelerarCoche()">Acelerar</button>
+</div>
