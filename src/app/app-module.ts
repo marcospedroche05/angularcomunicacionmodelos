@@ -2,16 +2,23 @@ import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { App } from './app';
+import { ListaproductosComponent } from './components/listaproductos.component/listaproductos.component';
+import { appRoutingProvider, routing } from './app.routing';
+import { MenuComponent } from './components/menu.component/menu.component';
 
 @NgModule({
   declarations: [
-    App
+    App,
+    ListaproductosComponent,
+    MenuComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    appRoutingProvider
   ],
   bootstrap: [App]
 })
