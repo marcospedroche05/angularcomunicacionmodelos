@@ -1,1 +1,9 @@
-<p>comic.component works!</p>
+<div style="display: flex; justify-content: space-around;">
+    <div>
+        <h1 style="color:blue">{{comic.titulo}}</h1>
+        <p>{{comic.descripcion}}</p>
+        <img src="{{comic.imagen}}" width="200px"/>
+        <button (click)="obtenerFavorito()">Marcar favorito</button>
+        <button (click)="eliminarComic()">Eliminar</button>
+    </div>
+</div>

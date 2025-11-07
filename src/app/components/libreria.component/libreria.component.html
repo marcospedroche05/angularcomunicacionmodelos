@@ -1,7 +1,23 @@
 <div>
     <h1>Libreria</h1>
     <hr>
-    @for(elemento of comics; track elemento){
-        <app-comic [comic]="elemento"></app-comic>
+    <form #comicForm="ngForm">
+        <label>Titulo: </label>
+        <input type="text" name="cajanombre" #cajanombre />
+        <label>Imagen: </label>
+        <input type="text" name="cajaimagen" #cajaimagen/>
+        <label>Descripcion: </label>
+        <input type="text" name="cajadescripcion" #cajadescripcion/>
+        <button (click)="nuevoComic()">Crear comic</button>
+    </form>
+    <hr>
+    <div *ngIf="comicFavorito">
+        <h1>Comic favorito</h1>
+        <h2>{{comicFavorito.titulo}}</h2>
+        <p>{{comicFavorito.descripcion}}</p>
+        <img src="{{comicFavorito.imagen}}" width="200px"/>
+    </div>
+    @for(elemento of comics; track elemento; let i = $index){
+        <app-comic [comic]="elemento" (seleccionarFavorito)="seleccionarFavorito($event)" [index]="i" (deleteComic)="deleteComic($event)"></app-comic>
     }
 </div>
